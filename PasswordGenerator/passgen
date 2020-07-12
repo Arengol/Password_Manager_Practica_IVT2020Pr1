@@ -1,0 +1,73 @@
+#include <ctime>
+#include <string>
+#include <fstream>
+#include <iostream>
+using namespace std;
+
+class CPassGen
+{
+private:
+    string pass;
+    int length;
+    int number;
+
+public:
+    void setLength(int length);
+    void setNumber(int p_number);
+    CPassGen();//конструктор по умолчанию
+    string getPassword(int length);//возвращает пароль длинной length
+    void   getPassword();//перегруженный метод
+    void entry();//ввод значений
+
+};
+
+CPassGen::CPassGen()
+{
+    srand(time(0));//установка начального значения генератора случайных чисел
+}
+
+void CPassGen::setLength(int p_length)
+{
+    length = p_length;
+}
+
+void CPassGen::setNumber(int p_number)
+{
+    number = p_number;
+}
+
+void CPassGen::entry()
+{
+    cout << "Введите длину пароля: ";
+    cin >> length;
+    cout << "Введите кол-во паролей: ";
+    cin >> number;
+}
+
+string CPassGen::getPassword(int length)
+{
+    string password = "";
+    for (int i = 0; i < length; i++)
+        password += char('0' + rand() % ('z' - '0'));
+    return password;
+}
+
+void CPassGen::getPassword()
+{
+
+    string password;
+
+    for (int k = 0; k < number; k++)
+    {
+        password = getPassword(length);//генерация пароля  
+    }
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    CPassGen pPassword;
+    pPassword.entry();
+    pPassword.getPassword();
+    return 0;
+}
