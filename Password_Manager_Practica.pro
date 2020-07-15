@@ -7,4 +7,6 @@ SUBDIRS += \
     DataBase \
     Main_Password_Manager_Practica
 
+CONFIG+= ordered
+
 
