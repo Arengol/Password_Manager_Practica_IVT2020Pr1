@@ -1,8 +1,10 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 #include <QString>
-#include <QString>
 #include <vector>
+#include <QFile>
+#include <QTextStream>
+#include "crypt.h"
 namespace Base {
 class DataBase
 {
@@ -14,18 +16,22 @@ private:
         QString userName;
         QString userPassword;
     } ContainerUserData;
+
     std::vector <userData> Data;
 public:
-    void SaveDatabase(QString file, QString cryptoKey);
-    void LoadDatabase(QString file, QString cryptoKey);
+    bool LoadDatabase();
+    void SaveDatabase();
     void Create (QString userName, QString userPassword);
-    void Edit ();
+    void Edit (int pointer, QString userName, QString userPassword);
     void Delete (int pointer);
     QString UserNameGetter(int i);
     QString PasswordGetter(int i);
     int DatabaseSizeGetter();
-    void DatabaseSetter();
-
+    QString FileGetter();
+    void FileSetter(QString fileOp);
+    QString CryptoKeyGetter();
+    void CryptoKeySetter(QString cryptoKeyOp);
+    void DatabaseSetter();//временный
 };
 }
 
