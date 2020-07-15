@@ -11,7 +11,6 @@ public:
     Crypto(QString startKey);
     QString Crypt(QString text);
     QString Decrypt(QString text);
-    void mixer();
     ~Crypto();
 };
 
