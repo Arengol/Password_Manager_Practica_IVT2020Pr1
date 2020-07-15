@@ -6,7 +6,7 @@ Crypto::Crypto(QString startKey)
     int keySum=0;
     for (int i = 0; i<temp.size();i++)
     {
-        keySum+=(int)temp[i]*i;
+        keySum+=(int)temp[i]*(i+1);
     }
     srand(keySum);
     for (int i = 0; i<94; i++)
