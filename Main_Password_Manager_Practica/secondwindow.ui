@@ -116,7 +116,7 @@
       <x>1</x>
       <y>30</y>
       <width>189</width>
-      <height>111</height>
+      <height>126</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -133,14 +133,28 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_6"/>
+        <widget class="QLineEdit" name="lineEdit_11"/>
        </item>
       </layout>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>Сгенерировать</string>
+        <string>Цифры</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="text">
+        <string>Буквы</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="text">
+        <string>Буквы, цифры и спец символы</string>
        </property>
       </widget>
      </item>
@@ -188,7 +202,7 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_3"/>
+          <widget class="QLineEdit" name="lineEdit"/>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_3">
@@ -198,7 +212,7 @@
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="lineEdit_2"/>
          </item>
          <item row="4" column="0">
           <widget class="QLabel" name="label_5">
@@ -208,7 +222,7 @@
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="lineEdit_3"/>
          </item>
         </layout>
        </item>
@@ -222,7 +236,7 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="lineEdit_4"/>
          </item>
          <item row="2" column="0" colspan="2">
           <widget class="QLabel" name="label_2">
@@ -242,48 +256,15 @@
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QLineEdit" name="lineEdit_11"/>
+          <widget class="QLineEdit" name="lineEdit_6"/>
          </item>
         </layout>
        </item>
       </layout>
      </item>
-     <item row="1" column="0" colspan="2">
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="text">
-        <string>Сохранить</string>
-       </property>
-      </widget>
-     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>152</width>
-      <height>15</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QLabel" name="label_8">
-       <property name="text">
-        <string>Выбрана заптсь №</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_9">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
       <x>350</x>

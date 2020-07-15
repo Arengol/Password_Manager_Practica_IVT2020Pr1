@@ -31,3 +31,37 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../DataBase/release/ -lDataBase
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../DataBase/debug/ -lDataBase
+
+INCLUDEPATH += $$PWD/../DataBase
+DEPENDPATH += $$PWD/../DataBase
+
+win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../DataBase/release/libDataBase.a
+else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../DataBase/debug/libDataBase.a
+else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../DataBase/release/DataBase.lib
+else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../DataBase/debug/DataBase.lib
+
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../PasswordGenerator/release/ -lPasswordGenerator
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../PasswordGenerator/debug/ -lPasswordGenerator
+
+INCLUDEPATH += $$PWD/../PasswordGenerator
+DEPENDPATH += $$PWD/../PasswordGenerator
+
+win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../PasswordGenerator/release/libPasswordGenerator.a
+else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../PasswordGenerator/debug/libPasswordGenerator.a
+else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../PasswordGenerator/release/PasswordGenerator.lib
+else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../PasswordGenerator/debug/PasswordGenerator.lib
+
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../UsernameGenerator/release/ -lUsernameGenerator
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../UsernameGenerator/debug/ -lUsernameGenerator
+
+INCLUDEPATH += $$PWD/../UsernameGenerator
+DEPENDPATH += $$PWD/../UsernameGenerator
+
+win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../UsernameGenerator/release/libUsernameGenerator.a
+else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../UsernameGenerator/debug/libUsernameGenerator.a
+else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../UsernameGenerator/release/UsernameGenerator.lib
+else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$OUT_PWD/../UsernameGenerator/debug/UsernameGenerator.lib
